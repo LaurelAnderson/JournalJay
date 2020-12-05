@@ -14,9 +14,12 @@
 		"no-restricted-syntax": "off"
 	},
 	"globals": {
-		"_": true
+		"_": true,
+    "chai": true
 	},
   "env": {
-    "browser": true
+    "browser": true,
+    "node": true,
+    "mocha": true
   }
 }
