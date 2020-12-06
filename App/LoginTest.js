@@ -10,7 +10,6 @@ describe('Test for Correctness', function () {
   describe('UserList()', function () {
     const user1 = new UserProfile('Me', 'Password123');
     const user2 = new UserProfile('Laurel', 'Giveiturall');
-    const user3 = new UserProfile('Irina', 'CoolestCat');
     const listOfUsers = new UserList();
     const listOfUsers2 = new UserList();
     listOfUsers.addUser(user1);
