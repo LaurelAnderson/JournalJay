@@ -1,4 +1,21 @@
 /*  global UserProfile, UserList */
+<<<<<<< Updated upstream
+=======
+
+// link to another page
+function traverse() { window.location.href = 'View.html'; }
+
+// this deals with creating a new user
+function confirmBox(listOfUsers, inputName, inputPassword) {
+  if (window.confirm('Would you like to make an account?')) {
+    listOfUsers.addUser(new UserProfile(inputName, inputPassword));
+    traverse();
+  } else {
+    window.location.reload();
+  }
+}
+
+>>>>>>> Stashed changes
 // This is a function that simulates how the controller will interact with the view.
 function userInput(inputName, inputPassword) {
   // create a static list of users
@@ -8,13 +25,10 @@ function userInput(inputName, inputPassword) {
 
   const retProfile = listOfUsers.search(inputName);
   if (retProfile) { // If they are a known user
-    alert('you are a user.');
     if (retProfile.password === inputPassword && retProfile.name === inputName) { // check password
-      alert('you are signed in!');
-      console.log(listOfUsers);
+      traverse(); // go to site page
     } else { // incorrect password
       alert('incorrect username or password');
-      console.log(listOfUsers);
     }
   } else if (inputName === '' || inputPassword === '') {
     alert('Please input a username or password');
