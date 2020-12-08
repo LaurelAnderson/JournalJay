@@ -1,4 +1,15 @@
 /*  global UserProfile, UserList */
+
+function confirmBox(listOfUsers, inputName, inputPassword) {
+  if (window.confirm('Would you like to make an account?')) {
+    listOfUsers.addUser(new UserProfile(inputName, inputPassword));
+    alert('We made an account for you!');
+    console.log(listOfUsers);
+  } else {
+    window.location.reload();
+  }
+}
+
 // This is a function that simulates how the controller will interact with the view.
 function userInput(inputName, inputPassword) {
   // create a static list of users
@@ -18,10 +29,8 @@ function userInput(inputName, inputPassword) {
     }
   } else if (inputName === '' || inputPassword === '') {
     alert('Please input a username or password');
-  } else { // if they are not a known user, make an account for them.
-    alert('we made an account for you.'); // maybe here create an empty account for that person.
-    listOfUsers.addUser(new UserProfile(inputName, inputPassword));
-    console.log(listOfUsers);
+  } else { // if they are not a known user, ask them if they want to sign up.
+    confirmBox(listOfUsers, inputName, inputPassword);// do a confirm here.
   }
 }
 
