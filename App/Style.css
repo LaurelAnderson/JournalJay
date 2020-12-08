@@ -1,0 +1,22 @@
+#container
+{
+    padding: 15px;
+}
+
+#entryBody 
+{
+    height: 200px;
+}
+
+select
+{
+    height: 200px!important;
+}
+
+#entryDisplay
+{
+    padding: 20px;
+    border: 1px solid #121212;
+    background-color: aliceblue;
+    border-radius: 5px;
+}

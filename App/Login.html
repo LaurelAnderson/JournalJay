@@ -8,22 +8,44 @@
   <script defer src="Login.js"></script>
   <script defer src="Classes.js"></script>
   <title>JournalJay Login</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
 </head>
 <body>
-  <main>
+  <div id="container">
+    <h1>JournalJay</h1>
 
-    <h1>Login</h1>
-
-    <div id="login-error-msg-outer">
-      <p id="login-error-msg"></p>
+    <div id="login">
+      <h2>Login</h2>
+      <div id="login-error-msg-outer">
+        <p id="login-error-msg"></p>
+      </div>
+      <form id="login-form">
+       <input type="text" name="username" id="username-field" class="login-form-field" placeholder="Username">
+       <input type="password" name="password" id="password-field" class="login-password-field" placeholder="Password">
+       <input type="submit" value="Login" id="login-form-submit">
+      </form>
     </div>
 
-    <form id="login-form">
-      <input type="text" name="username" id="username-field" class="login-form-field" placeholder="Username">
-      <input type="password" name="password" id="password-field" class="login-password-field" placeholder="Password">
-      <input type="submit" value="Login" id="login-form-submit">
-    </form>
+    <div id="write">
+      <label for="entryTitle">Title</label>
+      <input type="text" id="entryTitle"/>
+      <label for="entryBody">Journal Entry</label>
+      <textarea id="entryBody"></textarea>
+      <button id="saveButton">Save Entry</button>
+    </div>
 
-  </main>
+    <div id="peruse">
+      <button id="peruseButton">Create New Entry</button>
+      <select size="15" id="entryList"></select>
+      <div id="entryDisplay"></div>
+    </div>
+
+
+  </div>
+
+  <script src="Login.js"></script>
+  <script src="JournalJay.js"></script>
 </body>
 </html>
