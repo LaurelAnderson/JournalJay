@@ -1,10 +1,13 @@
 /*  global UserProfile, UserList */
 
+// link to another page
+function traverse() { window.location.href = 'View.html'; }
+
+// this deals with creating a new user
 function confirmBox(listOfUsers, inputName, inputPassword) {
   if (window.confirm('Would you like to make an account?')) {
     listOfUsers.addUser(new UserProfile(inputName, inputPassword));
-    alert('We made an account for you!');
-    console.log(listOfUsers);
+    traverse();
   } else {
     window.location.reload();
   }
@@ -12,25 +15,23 @@ function confirmBox(listOfUsers, inputName, inputPassword) {
 
 // This is a function that simulates how the controller will interact with the view.
 function userInput(inputName, inputPassword) {
-  // create a static list of users
+// create a static list of users
   const listOfUsers = new UserList();
   listOfUsers.addUser(new UserProfile('Laurel', 'qwerty'));
   listOfUsers.addUser(new UserProfile('Irina', 'password123'));
 
   const retProfile = listOfUsers.search(inputName);
   if (retProfile) { // If they are a known user
-    alert('you are a user.');
     if (retProfile.password === inputPassword && retProfile.name === inputName) { // check password
-      alert('you are signed in!');
-      console.log(listOfUsers);
+      traverse(); // go to site page
     } else { // incorrect password
       alert('incorrect username or password');
-      console.log(listOfUsers);
     }
   } else if (inputName === '' || inputPassword === '') {
     alert('Please input a username or password');
-  } else { // if they are not a known user, ask them if they want to sign up.
-    confirmBox(listOfUsers, inputName, inputPassword);// do a confirm here.
+  } else { // if they are not a known user, make an account for them.
+    listOfUsers.addUser(new UserProfile(inputName, inputPassword));
+    confirmBox(listOfUsers, inputName, inputPassword);
   }
 }
 
