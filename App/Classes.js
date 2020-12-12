@@ -32,4 +32,3 @@ class Entry {
     this.color = color;
   }
 }
-
