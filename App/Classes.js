@@ -21,3 +21,14 @@ class UserList {
     return this.listArr.find((element) => element.name === username);
   }
 }
+
+// Class to define Journal Entry object
+class Entry {
+  constructor(title, body, time, mood, color) {
+    this.data = [title, body];
+    this.time = time;
+    this.mood = mood;
+    this.color = color;
+  }
+}
+
