@@ -37,6 +37,10 @@ function init() {
             displayEntry(e.target.value);
         });
 
+        document.getElementById('helpButton').addEventListener('click', function(e) {
+            window.location.href = 'help.html';
+        });
+
         readEntries();
 
     } else { writeEntry(); }
