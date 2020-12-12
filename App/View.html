@@ -2,23 +2,33 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+  <link rel="stylesheet" href="Style.css">
+  <script defer src="Login.js"></script>
+  <script defer src="Classes.js"></script>
   <title>JournalJay</title>
 </head>
 <body>
 
+<div id="container">
   <h1>JournalJay</h1>
-  <div class="ui inverted menu">
-    <a class="active item">
-      Home
-    </a>
-    <a class="item">
-      Messages
-    </a>
-    <a class="item">
-      Friends
-    </a>
+
+  <div id="write">
+    <label for="entryTitle">Title</label>
+    <input type="text" id="entryTitle"/>
+    <label for="entryBody">Journal Entry</label>
+    <textarea id="entryBody"></textarea>
+    <button id="saveButton">Save Entry</button>
   </div>
+
+  <div id="peruse">
+    <button id="peruseButton">Create New Entry</button>
+    <select size="15" id="entryList"></select>
+    <div id="entryDisplay"></div>
+  </div>
+</div>
 
 </body>
 </html>
