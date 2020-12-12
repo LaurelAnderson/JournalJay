@@ -24,10 +24,10 @@ class UserList {
 
 // Class to define Journal Entry object
 class Entry {
-  constructor(title, body, time, mood, color) {
+  constructor(title, body, date, mood, color) {
     this.title = title;
     this.body = body;
-    this.time = time;
+    this.date = date;
     this.mood = mood;
     this.color = color;
   }
