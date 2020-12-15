@@ -21,6 +21,7 @@ function init() {
     for (let x = 0; x < entryArray.length; x++) {
       out += `<option value=${x}>`;
       out += entryArray[x].title;
+      out += " " + entryArray[x].mood;
       out += '</option>';
       document.getElementById('entryMaster').innerHTML = out;
       dates.push(entryArray[x].date);
@@ -29,8 +30,8 @@ function init() {
     document.getElementById('peruseButton').addEventListener('click', function (e) {
       if (dates.includes(today)) {
         window.alert('Sorry, you have already made a journal entry today.\nView old entries and come back tomorrow!');
-        document.getElementById('peruseButton').disabled = true;
-      } else { writeEntry(); }
+        // document.getElementById('peruseButton').disabled = true;
+      } else { writeEntry() }; 
     });
 
     document.getElementById('entryMaster').addEventListener('click', function (e) {
@@ -55,6 +56,7 @@ function writeEntry() {
   document.getElementById('write').style.display = 'block';
   document.getElementById('entryTitle').value = '';
   document.getElementById('entryBody').value = '';
+  document.getElementById('entryMood').value = '';
 }
 
 // go to "peruse" div when reading entries
@@ -67,7 +69,7 @@ function readEntries() {
 function displayEntry(entry) {
   // get array from memory
   const entryArray = JSON.parse(localStorage.getItem('entryData'));
-  let out = `<h2>${entryArray[entry].title}</h2>`;
+  let out = `<h2>${entryArray[entry].title.concat(" " + entryArray[entry].mood)}</h2>`;
   out += `<h4>Date: ${new Date(entryArray[entry].date).toDateString()}</h4>`;
   out += `<p>${entryArray[entry].body}</p>`;
   document.getElementById('entryDisplay').innerHTML = out;
@@ -78,7 +80,8 @@ saveButton.onclick = function () {
   const entryDate = new Date().setHours(0, 0, 0, 0);
   const entryTitle = document.getElementById('entryTitle').value;
   const entryBody = document.getElementById('entryBody').value;
-  const theEntry = new Entry(entryTitle, entryBody, entryDate);
+  const entryMood = document.getElementById('entryMood').options[document.getElementById('entryMood').selectedIndex].text;
+  const theEntry = new Entry(entryTitle, entryBody, entryDate, entryMood);
   saveEntry(theEntry);
 };
 
