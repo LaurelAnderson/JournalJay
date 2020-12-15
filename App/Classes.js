@@ -36,5 +36,5 @@ class Entry {
 // create a global static list of users to simulate a database
 const listOfUsers = new UserList();
 listOfUsers.addUser(new UserProfile('Laurel', 'qwerty'));
-listOfUsers.addUser(new UserProfile('Irina', 'password123'));
+listOfUsers.addUser(new UserProfile('Irina', 'html'));
 listOfUsers.addUser(new UserProfile('Newton', 'CalcRocks'));

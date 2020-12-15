@@ -12,16 +12,15 @@
 
 <div id="container">
     <h1>JournalJay Profile</h1>
-  <p>This is where a user can view and change their username and password.</p>
+  <p>This is where a user can view and change their username and password.
+  </p>
 
   <div class="info">
-    <div class="profile tabShow">
-      <h4>username</h4>
-      <input type="text" class="input" value="">
-      <h4>password</h4>
-      <input type="password" class="input" value="">
-      <button class="btn">Update</button>
-    </div>
+    <form id="update-form">
+      <input type="text" name="username" id="username-field" class="login-form-field" placeholder="Irina">
+      <input type="password" name="password" id="password-field" class="login-password-field" placeholder="****">
+      <input type="button" value="Update" id="update-profile">
+     </form>
   </div>
 
   <form id="login-form">
@@ -29,6 +28,7 @@
   </form>
 
 </div>
+  <script defer src="Profile.js"></script>
   <script defer src="Login.js"></script>
   <script defer src="Classes.js"></script>
   <script defer src="HelpPage.js"></script>
