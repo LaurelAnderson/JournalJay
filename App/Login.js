@@ -1,4 +1,4 @@
-/*  global UserProfile, listOfUsers */
+/*  global UserProfile, listOfUsers, signedInUser */
 
 // link to another page
 function traverse() { window.location.href = 'View.html'; }
@@ -7,6 +7,8 @@ function traverse() { window.location.href = 'View.html'; }
 function confirmBox(inputName, inputPassword) {
   if (window.confirm('Would you like to make an account with the given information?')) {
     listOfUsers.addUser(new UserProfile(inputName, inputPassword));
+    signedInUser.splice(0, 0, inputName);
+    signedInUser.splice(1, 1, inputPassword);
     traverse();
   } else {
     window.location.reload();
@@ -18,6 +20,9 @@ function userInput(inputName, inputPassword) {
   const retProfile = listOfUsers.search(inputName);
   if (retProfile) { // If they are a known user
     if (retProfile.password === inputPassword && retProfile.name === inputName) { // check password
+      // signal user as logged in.
+      signedInUser.splice(0, 0, inputName);
+      signedInUser.splice(1, 1, inputPassword);
       traverse(); // go to site page
     } else { // incorrect password
       alert('incorrect username or password');
@@ -50,7 +55,6 @@ loginButton.addEventListener('click', (e) => {
   e.preventDefault();
   const username = loginForm.username.value;
   const password = loginForm.password.value;
-
   userInput(username, password);
 });
 

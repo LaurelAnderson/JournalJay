@@ -38,3 +38,5 @@ const listOfUsers = new UserList();
 listOfUsers.addUser(new UserProfile('Laurel', 'qwerty'));
 listOfUsers.addUser(new UserProfile('Irina', 'password123'));
 listOfUsers.addUser(new UserProfile('Newton', 'CalcRocks'));
+const signedInUser = [];
+signedInUser.push('tempName');
