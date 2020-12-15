@@ -29,7 +29,7 @@ function init() {
     document.getElementById('peruseButton').addEventListener('click', function (e) {
       if (dates.includes(today)) {
         window.alert('Sorry, you have already made a journal entry today.\nView old entries and come back tomorrow!');
-        // document.getElementById('peruseButton').disabled = true;
+        document.getElementById('peruseButton').disabled = true;
       } else { writeEntry(); }
     });
 
