@@ -60,11 +60,11 @@ function writeEntry() {
 
   document.getElementById('helpButton').addEventListener('click', function (e) {
       window.location.href = 'help.html';
-    });
+  });
 
-    document.getElementById('profButton').addEventListener('click', function (e) {
+  document.getElementById('profButton').addEventListener('click', function (e) {
       window.location.href = 'profile.html';
-    });
+  });
 }
 
 // go to "peruse" div when reading entries
