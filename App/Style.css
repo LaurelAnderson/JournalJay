@@ -1,39 +1,69 @@
-#container
-{
+#container {
     padding: 15px;
 }
 
-#entryBody
-{
+#entryBody {
     height: 200px;
 }
 
-#entryMood
-{
+#entryMood {
     height: 50px!important;
     font-size: 35px;
 }
 
-select
-{
+select {
     height: 200px!important;
 }
 
-#entryDisplay
-{
+.select-blue {
+    position: relative;
+    display: inline-block;
+}
+
+.select-blue select {
+    border: 1px solid #004AAD;
+    outline: none;
+}
+
+.select-blue::after {
+    content: '';
+    position: absolute;
+    right: 15px;
+    top: 95px;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid #004AAD;
+    pointer-events: none;
+  }
+
+#entryDisplay {
     padding: 20px;
     border: 1px solid #121212;
     background-color: aliceblue;
     border-radius: 5px;
 }
 
+#entryMaster:active,
+#entryMaster:focus {
+    border: 1px solid #004AAD!important;
+}
+
 .button-blue {
+    background-color: #004AAD!important;
+    border-color: #004AAD!important;
+  }
+
+.button-blue:hover {
+    background-color: gray!important;
+    border-color: gray!important;
+}
+
+.button-blue-clear {
     background-color: transparent;
     border-color: #004AAD;
     color: #004AAD;
   }
 
-.button-blue:hover {
+.button-blue-clear:hover {
     background-color: #004AAD;
 }
-
