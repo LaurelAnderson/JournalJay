@@ -7,6 +7,7 @@ function traverse() { window.location.href = 'View.html'; }
 function confirmBox(inputName, inputPassword) {
   if (window.confirm('Would you like to make an account with the given information?')) {
     listOfUsers.addUser(new UserProfile(inputName, inputPassword));
+    localStorage.clear();
     traverse();
   } else {
     window.location.reload();
