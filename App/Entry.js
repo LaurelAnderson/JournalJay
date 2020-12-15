@@ -57,6 +57,14 @@ function writeEntry() {
   document.getElementById('entryTitle').value = '';
   document.getElementById('entryBody').value = '';
   document.getElementById('entryMood').value = '';
+
+  document.getElementById('helpButton').addEventListener('click', function (e) {
+      window.location.href = 'help.html';
+    });
+
+    document.getElementById('profButton').addEventListener('click', function (e) {
+      window.location.href = 'profile.html';
+    });
 }
 
 // go to "peruse" div when reading entries
