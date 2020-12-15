@@ -41,8 +41,8 @@ function init() {
       window.location.href = 'help.html';
     });
 
-    document.getElementById('acctButton').addEventListener('click', function (e) {
-      window.location.href = 'account.html';
+    document.getElementById('profButton').addEventListener('click', function (e) {
+      window.location.href = 'profile.html';
     });
 
     readEntries();

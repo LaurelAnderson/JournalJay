@@ -2,3 +2,5 @@
 *.tmp
 *.iml
 *.xml
+App/.DS_Store
+.DS_Store
