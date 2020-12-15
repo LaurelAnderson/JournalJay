@@ -41,6 +41,10 @@ function init() {
       window.location.href = 'help.html';
     });
 
+    document.getElementById('acctButton').addEventListener('click', function (e) {
+      window.location.href = 'account.html';
+    });
+
     readEntries();
   } else { writeEntry(); }
 }
