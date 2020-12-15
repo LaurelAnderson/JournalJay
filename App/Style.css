@@ -27,6 +27,13 @@ select
     border-radius: 5px;
 }
 
+.button-blue {
+    background-color: transparent;
+    border-color: #004AAD;
+    color: #004AAD;
+  }
 
-
+.button-blue:hover {
+    background-color: #004AAD;
+}
 
