@@ -1,7 +1,7 @@
 // This is the basic logic of the profile page
 
-window.document.getElementById('username-field').placeholder = 'current username';
-window.document.getElementById('password-field').placeholder = 'current password';
+window.document.getElementById('username-field').placeholder = 'New Username';
+window.document.getElementById('password-field').placeholder = 'Current Password';
 
 const updateForm = window.document.getElementById('update-form');
 const updateButton = window.document.getElementById('update-profile');
