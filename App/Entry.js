@@ -65,6 +65,10 @@ function writeEntry() {
   document.getElementById('profButton').addEventListener('click', function (e) {
       window.location.href = 'profile.html';
   });
+
+  document.getElementById('cancelButton').addEventListener('click', function (e) {
+    window.location.href = 'view.html';
+});
 }
 
 // go to "peruse" div when reading entries
