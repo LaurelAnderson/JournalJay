@@ -1,5 +1,4 @@
 // This is what makes the user profile objects.
-// eslint-disable-next-line max-classes-per-file
 class UserProfile {
   constructor(name, password) {
     this.name = name;

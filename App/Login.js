@@ -34,7 +34,8 @@ function userInput(inputName, inputPassword) {
 // This function deals with creating a new account
 function createAccount(inputName, inputPassword) {
   const retProfile = listOfUsers.search(inputName); // returns account with given username
-  if (retProfile) { // if there is a user with that username
+  // if there is a user with that username
+  if (retProfile) {
     alert('Username is taken');
   } else if (inputName === '' || inputPassword === '') { // if the fields are empty
     alert('Please input a username or password');
