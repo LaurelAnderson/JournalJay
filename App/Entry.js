@@ -31,7 +31,7 @@ function init() {
       if (dates.includes(today)) {
         window.alert('Sorry, you have already made a journal entry today.\nView old entries and come back tomorrow!');
         document.getElementById('peruseButton').disabled = true;
-      } else { writeEntry() }; 
+      } else { writeEntry(); } 
     });
 
     document.getElementById('entryMaster').addEventListener('click', function (e) {

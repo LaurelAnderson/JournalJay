@@ -4,6 +4,12 @@
 
 #entryBody {
     height: 200px;
+    border: none!important;
+    border-bottom: 2px solid #004AAD!important;
+}
+
+#entryBody:focus {
+    background-color: aliceblue;
 }
 
 #entryMood {
@@ -34,7 +40,25 @@ select {
     border-right: 8px solid transparent;
     border-top: 8px solid #004AAD;
     pointer-events: none;
-  }
+}
+
+input[type=text] {
+    border: none!important;
+    border-bottom: 2px solid #004AAD!important;
+}
+
+input[type=password] {
+    border: none!important;
+    border-bottom: 2px solid #004AAD!important;
+}
+
+input[type=text]:focus {
+    background-color: aliceblue;
+}
+
+input[type=password]:focus {
+    background-color: aliceblue;
+}
 
 #entryDisplay {
     padding: 20px;
@@ -45,6 +69,12 @@ select {
 
 #entryMaster:active,
 #entryMaster:focus {
+    border: 1px solid #004AAD!important;
+}
+
+#entryMood:active,
+#entryMood:focus {
+    scrollbar-arrow-color: aliceblue;
     border: 1px solid #004AAD!important;
 }
 
