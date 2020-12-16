@@ -1,4 +1,4 @@
-/*  global UserProfile, listOfUsers, signedIn */
+/*  global UserProfile, listOfUsers */
 
 // link to another page
 function traverse() { window.location.href = 'View.html'; }
@@ -7,7 +7,6 @@ function traverse() { window.location.href = 'View.html'; }
 function confirmBox(inputName, inputPassword) {
   if (window.confirm('Would you like to make an account with the given information?')) {
     listOfUsers.addUser(new UserProfile(inputName, inputPassword));
-    signedIn.setSignedIn(inputName, inputPassword);
     localStorage.clear();
     traverse();
   } else {
@@ -20,8 +19,6 @@ function userInput(inputName, inputPassword) {
   const retProfile = listOfUsers.search(inputName);
   if (retProfile) { // If they are a known user
     if (retProfile.password === inputPassword && retProfile.name === inputName) { // check password
-      signedIn.setSignedIn(inputName, inputPassword);
-      alert(signedIn.retSignedName());
       traverse(); // go to site page
     } else { // incorrect password
       alert('incorrect username or password');
