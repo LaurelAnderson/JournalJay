@@ -7,5 +7,9 @@ Current Status: Final stage
 TO RUN: 
 
 Run the login.html file. That will start you at the login page and you can move through the 
-app as a user would. 
+app as a user would.
+
+To act as a returning user, use the following hard coded login credentials:
+Username: Irina
+Password: html
 
