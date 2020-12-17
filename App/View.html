@@ -27,7 +27,8 @@
     <label for="entryBody">Journal Entry</label>
     <textarea type="text" id="entryBody"></textarea>
     <label for="entryMood">Mood</label>
-    <select class="dropdown-container" id="entryMood" name="entryMood">
+    <select class="select-blue" id="entryMood" name="entryMood">
+      <option value=""></option>
       <option value="">😁</option>
       <option value="">😞</option>
       <option value="">😠</option>
@@ -38,8 +39,19 @@
       <option value="">😩</option>
       <option value="">😨</option>
     </select>
-    <button id="saveButton" class="button-blue">Save Entry</button>
-    <button id="cancelButton" class="button-blue">Cancel</button>
+    <label for="entryColor">Color</label>
+    <button type="button" class="button-blue" onclick="changeColor('#EAE7E2');">Gray</button>
+    <button type="button" class="button-blue" onclick="changeColor('#D7E2E8');">Mist</button>
+    <button type="button" class="button-blue" onclick="changeColor('#FEDDD8');">Pretty in Pink</button>
+    <button type="button" class="button-blue" onclick="changeColor('#FDF8E2');">Banana</button>
+    <button type="button" class="button-blue" onclick="changeColor('#FFF2CC');">Orange You Glad</button>
+    <button type="button" class="button-blue" onclick="changeColor('#D4DFBB');">Soothing Sage</button>
+
+      <div>
+        <button id="saveButton" class="button-blue">Save Entry</button>
+        <button id="cancelButton" class="button-blue">Cancel</button>
+      </div>
+    
   </div>
 
   <div id="peruse">

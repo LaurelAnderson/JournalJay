@@ -68,7 +68,7 @@ function writeEntry() {
 
   document.getElementById('cancelButton').addEventListener('click', function (e) {
     window.location.href = 'view.html';
-});
+  });
 }
 
 // go to "peruse" div when reading entries
@@ -85,6 +85,7 @@ function displayEntry(entry) {
   out += `<h4>Date: ${new Date(entryArray[entry].date).toDateString()}</h4>`;
   out += `<p>${entryArray[entry].body}</p>`;
   document.getElementById('entryDisplay').innerHTML = out;
+  document.getElementById('entryDisplay').style.background = entryArray[entry].color;
 }
 
 // save the entry the user made
@@ -93,7 +94,7 @@ saveButton.onclick = function () {
   const entryTitle = document.getElementById('entryTitle').value;
   const entryBody = document.getElementById('entryBody').value;
   const entryMood = document.getElementById('entryMood').options[document.getElementById('entryMood').selectedIndex].text;
-  const theEntry = new Entry(entryTitle, entryBody, entryDate, entryMood);
+  const theEntry = new Entry(entryTitle, entryBody, entryDate, entryMood, entryColor);
   saveEntry(theEntry);
 };
 
@@ -105,4 +106,9 @@ function saveEntry(entry) {
   localStorage.setItem('entryData', JSON.stringify(entryArray));
   readEntries();
   init();
+}
+
+function changeColor(color) {
+  document.getElementById('entryBody').style.background = color;
+  entryColor = color;
 }
