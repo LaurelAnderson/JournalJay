@@ -97,3 +97,10 @@ input[type=password]:focus {
 .button-blue-clear:hover {
     background-color: #004AAD;
 }
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
