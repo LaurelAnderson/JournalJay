@@ -94,6 +94,7 @@ saveButton.onclick = function () {
   const entryTitle = document.getElementById('entryTitle').value;
   const entryBody = document.getElementById('entryBody').value;
   const entryMood = document.getElementById('entryMood').options[document.getElementById('entryMood').selectedIndex].text;
+  const entryColor = document.getElementById('entryBody').style.background;
   const theEntry = new Entry(entryTitle, entryBody, entryDate, entryMood, entryColor);
   saveEntry(theEntry);
 };
