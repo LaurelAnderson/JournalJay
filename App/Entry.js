@@ -101,12 +101,6 @@ function saveEntry(entry) {
   init();
 }
 
-// go to "peruse" div when reading entries
-function readEntries() {
-  document.getElementById('peruse').style.display = 'block';
-  document.getElementById('write').style.display = 'none';
-}
-
 // save the entry the user made
 saveButton.onclick = function () {
   const entryDate = new Date().setHours(0, 0, 0, 0);
