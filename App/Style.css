@@ -2,6 +2,10 @@
     padding: 15px;
 }
 
+#save {
+    padding-top: 50px;
+}
+
 #entryBody {
     height: 200px;
     border: none!important;
@@ -103,4 +107,70 @@ input[type=password]:focus {
   margin-left: auto;
   margin-right: auto;
   width: 50%;
+}
+
+.button-gray {
+    background-color: #EAE7E2!important;
+    border-color: #EAE7E2!important;
+    color: gray;
+}
+
+.button-gray:hover {
+    background-color: gray!important;
+    border-color: gray!important;
+}
+
+.button-mist {
+    background-color: #D7E2E8!important;
+    border-color: #EAE7E2!important;
+    color: gray;
+}
+
+.button-mist:hover {
+    background-color: gray!important;
+    border-color: gray!important;
+}
+
+.button-pink {
+    background-color: #FEDDD8!important;
+    border-color: #FEDDD8!important;
+    color: gray;
+}
+
+.button-pink:hover {
+    background-color: gray!important;
+    border-color: gray!important;
+}
+
+.button-banana {
+    background-color: #FDF8E2!important;
+    border-color: #FDF8E2!important;
+    color: gray;
+}
+
+.button-banana:hover {
+    background-color: gray!important;
+    border-color: gray!important;
+}
+
+.button-orange {
+    background-color: #FFF2CC!important;
+    border-color: #FFF2CC!important;
+    color: gray;
+}
+
+.button-orange:hover {
+    background-color: gray!important;
+    border-color: gray!important;
+}
+
+.button-sage {
+    background-color: #D4DFBB!important;
+    border-color: #D4DFBB!important;
+    color: gray;
+}
+
+.button-sage:hover {
+    background-color: gray!important;
+    border-color: gray!important;
 }
