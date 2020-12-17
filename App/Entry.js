@@ -38,10 +38,11 @@ function readEntries() {
 function displayEntry(entry) {
   // get array from memory
   const entryArray = JSON.parse(localStorage.getItem('entryData'));
-  let out = `<h2>${entryArray[entry].title.concat(` ${entryArray[entry].mood}`)}</h2>`;
+  let out = `<h2>${entryArray[entry].title.concat(" " + entryArray[entry].mood)}</h2>`;
   out += `<h4>Date: ${new Date(entryArray[entry].date).toDateString()}</h4>`;
   out += `<p>${entryArray[entry].body}</p>`;
   document.getElementById('entryDisplay').innerHTML = out;
+  document.getElementById('entryDisplay').style.background = entryArray[entry].color;
 }
 
 // initialize the screen; update the screen for the user
@@ -100,6 +101,12 @@ function saveEntry(entry) {
   init();
 }
 
+// go to "peruse" div when reading entries
+function readEntries() {
+  document.getElementById('peruse').style.display = 'block';
+  document.getElementById('write').style.display = 'none';
+}
+
 // save the entry the user made
 saveButton.onclick = function () {
   const entryDate = new Date().setHours(0, 0, 0, 0);
@@ -107,6 +114,12 @@ saveButton.onclick = function () {
   const entryBody = document.getElementById('entryBody').value;
   const entryMood = document.getElementById('entryMood').options[
     document.getElementById('entryMood').selectedIndex].text;
-  const theEntry = new Entry(entryTitle, entryBody, entryDate, entryMood);
+  const entryColor = document.getElementById('entryBody').style.background;
+  const theEntry = new Entry(entryTitle, entryBody, entryDate, entryMood, entryColor);
   saveEntry(theEntry);
 };
+
+function changeColor(color) {
+  document.getElementById('entryBody').style.background = color;
+  entryColor = color;
+}
