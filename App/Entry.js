@@ -115,7 +115,7 @@ saveButton.onclick = function () {
   const entryMood = document.getElementById('entryMood').options[
     document.getElementById('entryMood').selectedIndex].text;
   const entryColor = document.getElementById('entryBody').style.background;
-  const theEntry = new Entry(entryTitle, entryBody, entryDate, entryMood);
+  const theEntry = new Entry(entryTitle, entryBody, entryDate, entryMood, entryColor);
   saveEntry(theEntry);
 };
 
